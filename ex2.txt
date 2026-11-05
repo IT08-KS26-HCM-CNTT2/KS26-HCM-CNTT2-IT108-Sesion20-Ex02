@@ -1,0 +1,24 @@
+BÀI TẬP 2: CHUỖI TẤN CÔNG TỪ MẬT KHẨU BỊ RÒ RỈ
+1. Cơ chế Hacker khai thác mật khẩu rò rỉ (Hiệu ứng Domino)
+- Khởi nguồn từ hệ thống yếu: Các diễn đàn công nghệ nhỏ hoặc trang web cộng đồng thường có hệ thống bảo mật kém, cơ sở dữ liệu mã hóa yếu hoặc lưu mật khẩu dạng văn bản thuần túy, dẫn đến việc dễ bị hacker tấn công đánh cắp cơ sở dữ liệu.
+- Hiệu ứng Domino: 
+  + Hầu hết người dùng có thói quen sử dụng chung một mật khẩu cho nhiều tài khoản khác nhau từ các diễn đàn nhỏ cho đến các dịch vụ quan trọng (Gmail, Facebook, GitHub).
+  + Hacker sẽ sử dụng các công cụ tự động hóa để thử cặp thông tin và mật khẩu rò rỉ hàng loạt lên các nền tảng lớn khác. 
+  + Ngay khi đăng nhập thành công vào một dịch vụ cốt lõi, hacker tiếp tục kiểm soát các dịch vụ liên kết, từ đó đánh cắp toàn bộ dữ liệu cá nhân, chiếm đoạt tài sản số hoặc dùng tài khoản đó để phát tán mã độc.
+2. Phân tích: Mật khẩu cảm tính vs Mật khẩu do máy tính sinh ra
+- Mật khẩu cảm tính (do con người tự đặt):
+  + Thường dựa trên ngày sinh, tên người thân, dãy số đơn giản.
+  + Điểm yếu: Có tính quy luật cao, dễ đoán và cực kỳ dễ bị bẻ khóa bằng các phương pháp tấn công vét cạn hoặc tấn công từ điển.
+- Mật khẩu do máy tính sinh ra:
+  + Bao gồm chuỗi ký tự ngẫu nhiên dài, kết hợp đầy đủ chữ hoa, chữ thường, số và ký tự đặc biệt.
+  + Ưu điểm: Phá vỡ hoàn toàn các quy luật tư duy của con người, khiến thời gian để máy tính dò ra mật khẩu kéo dài hàng thế kỷ, đảm bảo an toàn tuyệt đối trước các hình thức tấn công dò quét tự động.
+3. Tiêu chuẩn mã hóa AES-256 và vai trò của Password Manager
+- Tiêu chuẩn mã hóa AES-256 là gì?
+  + AES với khóa 256-bit là một trong những chuẩn mã hóa dữ liệu đối xứng mạnh mẽ nhất hiện nay, được chính phủ Hoa Kỳ và các tổ chức tài chính toàn cầu tin dùng để bảo vệ thông tin mật.
+  + Với khóa dài 256-bit, không gian khóa rất lớn và hiện tại không có siêu máy tính nào trên thế giới có đủ năng lực tính toán để phá mã AES-256 bằng phương pháp vét cạn.
+- Tại sao Password Manager an toàn hơn ghi chép thủ công?
+  + Sổ tay hoặc giấy ghi chú thủ công: Dễ bị người khác nhìn thấy, dễ bị mất cắp vật lý, hoặc bị rò rỉ nếu chụp ảnh lại.
+  + Password Manager: 
+    + Sử dụng thuật toán AES-256 để mã hóa toàn bộ cơ sở dữ liệu kho mật khẩu của bạn ngay trên thiết bị trước khi đồng bộ lên đám mây.
+    + Kho dữ liệu này được khóa chặt bằng một mật khẩu chính duy nhất. Kể cả khi máy chủ đám mây bị tấn công, hacker cũng chỉ nhận được các chuỗi ký tự mã hóa vô nghĩa không thể giải mã nếu không có mật khẩu chính của bạn.
+    + Trợ giúp quản lý hàng chục mật khẩu ngẫu nhiên khác nhau cho từng trang web mà không cần phải nhớ thủ công.
